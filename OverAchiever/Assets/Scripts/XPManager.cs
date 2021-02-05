@@ -3,7 +3,7 @@ using TMPro;
 public class XPManager : MonoBehaviour
 {
     public TextMeshProUGUI currentXPText, levelText; // , targetXPtext;
-    public int currentXP, targetXP, level;
+    public int currentXP, targetXP, level, temp, temp1;
 
     public int achievements;
 
@@ -24,13 +24,32 @@ public class XPManager : MonoBehaviour
 
     public void AddXP(int xp){
         currentXP += xp;
-
-        while(currentXP >= targetXP){
-            //currentXP = currentXP - targetXP;
+        temp = currentXP;
+        while(temp >= targetXP){
+            temp = temp - targetXP;
+            temp1 = temp;
             level++;
             levelText.text ="Level " + level.ToString();
             //targetXPtext.text = targetXP.ToString();
         }
+
+        currentXP += temp1;
+
+        currentXPText.text = currentXP.ToString()+ " xp";
+    }
+
+    public void XPBoost(int xp){
+        currentXP += xp;
+        temp = currentXP;
+        while(temp >= targetXP){
+            temp = temp - targetXP;
+            temp1 = temp;
+            level++;
+            levelText.text ="Level " + level.ToString();
+            //targetXPtext.text = targetXP.ToString();
+        }
+        
+        
 
         currentXPText.text = currentXP.ToString()+ " xp";
     }

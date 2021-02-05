@@ -8,6 +8,10 @@ public class Player: MonoBehaviour{
 
     public int i=0,j=0;
 
+    public void XPBooster(){
+        XPManager.instance.AddXP(10);
+    }
+
     public void ButtonPressed(){
         if(fileUploaded){
             while(i<=1){
