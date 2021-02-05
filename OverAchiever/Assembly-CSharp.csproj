@@ -111,6 +111,7 @@
      <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManager.cs" />
      <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
      <Compile Include="Assets\Scripts\AddNote.cs" />
+     <Compile Include="Assets\Scripts\FileManager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\XPManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

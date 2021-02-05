@@ -5,6 +5,8 @@ public class XPManager : MonoBehaviour
     public TextMeshProUGUI currentXPText, levelText; // , targetXPtext;
     public int currentXP, targetXP, level;
 
+    public int achievements;
+
     public static XPManager instance;
 
     private void Awake(){
@@ -24,7 +26,7 @@ public class XPManager : MonoBehaviour
         currentXP += xp;
 
         while(currentXP >= targetXP){
-            currentXP = currentXP - targetXP;
+            //currentXP = currentXP - targetXP;
             level++;
             levelText.text ="Level " + level.ToString();
             //targetXPtext.text = targetXP.ToString();
